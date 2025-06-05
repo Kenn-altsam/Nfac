@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         NavigationStack{
             ZStack{
@@ -45,7 +46,7 @@ struct ContentView: View {
                                 .font(.title3)
                             Text("155")
                         }
-                                
+                        
                     }
                     
                     Spacer()
@@ -57,12 +58,10 @@ struct ContentView: View {
                     NavigationLink(destination: ProfileView()) {
                         BaseButton(title: "Click")
                     }
-
+                    
                     
                     Spacer()
                 }
-                
-                
             }
         }
     }

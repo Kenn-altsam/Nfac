@@ -8,6 +8,7 @@
 import SwiftUI
 struct ProfileView: View {
     @Environment(\.dismiss) private var dismiss
+    @State private var closeButtonClicked = false
     
     var body: some View{
         ZStack{
@@ -25,12 +26,15 @@ struct ProfileView: View {
                     .padding()
                     .foregroundStyle(Color.black)
                 
-                BaseButton(title: "Close")
+                BaseButton(title: "Close") {
+                    dismiss()
+                }
             }
             
             
                 .foregroundStyle(Color.white)
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
